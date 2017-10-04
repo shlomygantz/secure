@@ -1,0 +1,17 @@
+{
+  "name": "securecode",
+  "version": "1.0.0",
+  "description": "Writing Secure Code",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shlomy Gantz",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.8.0"
+  },  "dependencies": {
+    "express": "^4.14.0",
+    "request": "2.81.0"
+  }
+}

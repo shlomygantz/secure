@@ -1,0 +1,80 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Writing Secure Code</title>
+    <meta name="description" content="A cool thing made with Gomix">
+    <link id="favicon" rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h3>Writing Secure Code</h3>
+    </header>
+ 
+    <h5 id="stockToggle">
+        1. Stock Data
+      </h5>
+    <section id="stockSection">
+      
+       <input name="symbol" type="text" maxlength="100" placeholder="Stock Symbol" value="MSFT"><button id="stockButton">Get Stock</button>
+       <div id="stockPrice">
+         
+      </div>
+      </section>
+
+    
+      
+        <h5 id="orderToggle">
+           2. Order Status
+         </h5>
+         <section id="orderSection">
+          <input id="orderNo" type="text" maxlength="100" placeholder="Order No.">
+          <input id="email" type="text" placeholder="Your email"><button id="orderButton">Find Order Status</button>
+          <div id="orderValidation">
+            
+         </div>
+         </section>
+
+
+     
+       
+         <h5 id="voterToggle">
+          3. Voter Registration
+        </h5>
+        <section id="voterSection">
+          <input id="idNo" type="text" maxlength="100" placeholder="Your ID Number">
+          <button id="voterButton">Am I registered?</button>
+          <div id="voterValidation">
+            <div id="voterId"></div>
+            <div id="voterName"></div>
+            <div id="voterLocation"></div>
+          </div>
+
+         </section>
+       
+        
+    <footer>
+      <a href="https://gomix.com/#!/remix/firststepcoding/ada1ce02-3073-45b5-9d9c-3d94f8958e4b">
+        Remix on GoMix
+      </a>
+    </footer>
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
