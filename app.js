@@ -73,12 +73,13 @@ app.post('/stockdata', function (request, response) {
 
 // This API point is used to retrieve order status
 app.get('/orderStatus', function (request, response) {
-  var start = process.hrtime();
+  var start = process.hrtime(); // start the timer
+  
   var emailExpression = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  console.log(request.query.email);
   var validEmail = emailExpression.test(request.query.email);
-  console.log(validEmail);
-  console.log(process.hrtime(start))
+
+  console.log(process.hrtime(start)) // log end time 
+
    if (validEmail) {
      response.sendStatus(200); 
   }
@@ -105,8 +106,4 @@ function getVoter(id) {
   return voters.find(o => o.id === id);
 }
   
-
-// start = process.hrtime();
-// console.log(validateEmailFormat('baldwin@andyet.net'));
-// console.log(process.hrtime(start));
 // jjjjjjjjjjjjjjjjjjjjjjjjjjjj@ccccccccccccccccccccccccccccc.555555555555555555555555555555555555555555555555555555{
