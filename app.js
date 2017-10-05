@@ -48,6 +48,8 @@ app.post('/stockdata', function (request, response) {
   request.addListener('end', function() {
     
     //var data = "response.end('success')"
+    // This key was generated for the purpose of the presentation, it will become invalid after the presentation
+    // get your own key at www.alphavantage.co
     var secretKey = '8H6ZI233KYY0RGL8';
     var stockQuery = eval("(" + data + ")");
    
