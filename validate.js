@@ -21,8 +21,8 @@ const Stock = attributes(
       } 
 })(class Stock {}); 
 
-const goodstock = new Stock({symbol: 'MSFT', sharePrice: 110.5 });
-const badstock = new Stock({symbol: 'MSFAAT', sharePrice: -11.5 });
+var goodstock = new Stock({symbol: 'MSFT', sharePrice: 110.5 });
+var badstock = new Stock({symbol: 'MSFAAT', sharePrice: -11.5 });
 
 console.log(badstock.validate());
 
