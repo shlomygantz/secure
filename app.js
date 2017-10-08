@@ -15,6 +15,11 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
+// global error handling - just for the presentation
+process.on('uncaughtException', function (err) {
+  console.error(err.stack);
+  console.log("Node NOT Exiting...");
+});
 // listen for requests :)
 var listener = app.listen(3000, function () {
   console.log('Your app is listening on port ' + listener.address().port);
